@@ -1,18 +1,4 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-
 const ComingSoon = () => {
-  const [email, setEmail] = useState("");
-
-  const handleNotify = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      toast.success("Thanks! We'll notify you when we launch!");
-      setEmail("");
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-subtle flex items-center justify-center px-4 py-12 relative overflow-hidden">
@@ -25,11 +11,14 @@ const ComingSoon = () => {
         {/* Logo/Brand */}
         <div className="mb-8 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-primary shadow-glow mb-6">
-            <span className="text-3xl font-bold text-white">GL</span>
+            <span className="text-3xl font-bold text-white">G</span>
           </div>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight">
-            Grayold Labs
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-2 tracking-tight">
+            Grayold
           </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground font-light tracking-wide">
+            Labs
+          </p>
         </div>
 
         {/* Tagline */}
@@ -44,36 +33,26 @@ const ComingSoon = () => {
         </div>
 
         {/* Description */}
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in-delay-2">
-          We're crafting something extraordinary. Be the first to know when we launch our cutting-edge solutions 
-          that will transform the way you work.
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-16 animate-fade-in-delay-2">
+          We're crafting something extraordinary. Our cutting-edge solutions 
+          will transform the way you work and innovate.
         </p>
 
-        {/* Email Subscription */}
-        <form onSubmit={handleNotify} className="max-w-md mx-auto animate-fade-in-delay-2">
-          <div className="flex gap-3 flex-col sm:flex-row">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 h-12 px-6 text-base bg-card border-border focus:border-accent focus:ring-accent"
-            />
-            <Button 
-              type="submit" 
-              className="h-12 px-8 bg-gradient-primary text-white font-medium hover:shadow-glow transition-all duration-300"
-            >
-              Notify Me
-            </Button>
+        {/* Feature Pills */}
+        <div className="flex flex-wrap gap-4 justify-center max-w-2xl mx-auto animate-fade-in-delay-2">
+          <div className="px-6 py-3 rounded-full bg-card border border-border shadow-soft">
+            <span className="text-sm font-medium text-foreground">Innovation First</span>
           </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            Join the waitlist and get exclusive early access
-          </p>
-        </form>
+          <div className="px-6 py-3 rounded-full bg-card border border-border shadow-soft">
+            <span className="text-sm font-medium text-foreground">Future Ready</span>
+          </div>
+          <div className="px-6 py-3 rounded-full bg-card border border-border shadow-soft">
+            <span className="text-sm font-medium text-foreground">Excellence Driven</span>
+          </div>
+        </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-border animate-fade-in-delay-2">
+        <div className="mt-24 pt-8 border-t border-border animate-fade-in-delay-2">
           <p className="text-sm text-muted-foreground">
             © 2025 Grayold Labs. All rights reserved.
           </p>

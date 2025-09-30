@@ -2,9 +2,16 @@ const ComingSoon = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle flex items-center justify-center px-4 py-12 relative overflow-hidden">
-      {/* Decorative elements */}
+      {/* Geometric decorative elements - Left side */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-primary opacity-5 rounded-3xl rotate-45 animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-1/3 left-20 w-48 h-48 border-4 border-accent/20 rounded-2xl rotate-12 animate-float" style={{ animationDelay: "4s" }} />
+      
+      {/* Geometric decorative elements - Right side */}
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }} />
+      <div className="absolute top-1/3 right-0 w-72 h-72 bg-gradient-primary opacity-10 rounded-full animate-float" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/2 right-32 w-56 h-56 border-4 border-accent/30 rounded-3xl -rotate-12 animate-float" style={{ animationDelay: "5s" }} />
+      <div className="absolute bottom-1/4 right-10 w-40 h-40 bg-accent/5 rounded-2xl rotate-45 animate-float" style={{ animationDelay: "6s" }} />
       
       {/* Main content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
